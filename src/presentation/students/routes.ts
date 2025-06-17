@@ -6,6 +6,7 @@ export class StudentsRoutes {
     const router = Router();
     const studentsController = new StudentsController();
     router.get('/', studentsController.getStudents);
+    router.post('/', studentsController.createStudent);
     return router;
   }
 }
