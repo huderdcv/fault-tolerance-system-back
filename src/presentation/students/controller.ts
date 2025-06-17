@@ -8,7 +8,7 @@ export class StudentsController {
     try {
       const students = await prisma.student.findMany();
 
-      // res.json(students); //COMENTAR ESTA LINEA. SIMULA un SERVIDOR COLGADO
+      res.json(students); //COMENTAR ESTA LINEA. SIMULA un SERVIDOR COLGADO
       return;
     } catch (error) {
       res.status(500).json({ error });
